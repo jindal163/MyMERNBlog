@@ -6,10 +6,12 @@ import Projects from './pages/Projects'
 import Dashboard from './pages/Dashboard'
 import About from './pages/About'
 import React from 'react'
+import Headers from './components/Headers'
 
 export default function App() {
   return (
     <BrowserRouter >
+    <Headers />
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/about' element={<About/>} />
