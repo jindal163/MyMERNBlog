@@ -44,7 +44,7 @@ export default function SignUp() {
         {/* left side */}
         <div className='flex-1'>
           <Link to='/' className='  font-bold dark:text-white text-4xl'>
-            <span className='px-2 py-1 bg-gradient-to-br from-black via-purple-400 to-purple-950 
+            <span className='px-2 py-1 bg-gradient-to-br  from-purple-800 to-blue-500 
             text-white rounded-lg'>Jindal's</span>
             Blog
           </Link>
