@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRoute from './router/user.route.js'
 import authRoute from './router/auth.route.js'
+// import bodyParser from 'body-parser';
 
 
 dotenv.config()
@@ -18,6 +19,8 @@ mongoose.connect(uri)
 })
 const app = express();
 app.use(express.json());
+// app.use(bodyParser.json())
+app.use(express.urlencoded({extended: true}))
 
 app.listen(3000, ()=> console.log("server started!!"))
 
