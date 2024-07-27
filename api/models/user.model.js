@@ -14,8 +14,12 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-    }
-}, {timestamps: true});
+    },
+    profilePicture: {
+        type: String,
+        default: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fvectors%2Fblank-profile-picture-mystery-man-973460%2F&psig=AOvVaw34V1ekumm-10QbqQf-y-1Q&ust=1722162118148000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLCq9Pv_xocDFQAAAAAdAAAAABAE",
+        },
+    }, {timestamps: true});
 
 const User = mongoose.model("User", userSchema);
 export default User;
