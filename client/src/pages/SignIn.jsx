@@ -7,7 +7,7 @@ import OAuth from '../components/OAuth';
 
 export default function SignIn() {
   const [formData, setFormData] = useState({});
-  const {loading, error: errorMessage} = useSelector(state =>   state.user)
+  const { loading, error: errorMessage } = useSelector(state => state.user)
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleChange = (e) => {
@@ -18,7 +18,6 @@ export default function SignIn() {
     if (!formData.password || !formData.email) {
       return dispatch(signInFailure('Please fill in all details'))
     }
-    console.log(formData)
     try {
       dispatch(signInStart());
       const res = await fetch('/api/auth/signin', {

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Alert, Button, Label, Spinner, TextInput } from "flowbite-react";
-import { syncIndexes } from 'mongoose';
 import OAuth from '../components/OAuth';
 
 export default function SignUp() {
@@ -17,7 +16,6 @@ export default function SignUp() {
     if (!formData.username || !formData.password || !formData.email) {
       return setErrorMessage('Please fill in all fields')
     }
-    console.log(formData)
     try {
       setLoading(true)
       setErrorMessage(null)
@@ -74,7 +72,7 @@ export default function SignUp() {
                   <Spinner size='sm' />
                   <span className='pl-3'> Loading... </span>
                 </>
-                ) : 'Sign up'
+                ) : ('Sign up')
               }
             </Button>
             <OAuth />
