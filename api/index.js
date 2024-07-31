@@ -3,13 +3,14 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRoute from './router/user.route.js'
 import authRoute from './router/auth.route.js'
+import cookieParser from 'cookie-parser';
 // import bodyParser from 'body-parser';
 
 
 dotenv.config()
 let uri = process.env.MONGO
 console.log(uri);
-
+ 
 mongoose.connect(uri)
 .then(()=>{
     console.log('Database connected');
@@ -19,6 +20,7 @@ mongoose.connect(uri)
 })
 const app = express();
 app.use(express.json());
+app.use(cookieParser());
 // app.use(bodyParser.json())
 app.use(express.urlencoded({extended: true}))
 
