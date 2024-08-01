@@ -206,7 +206,7 @@ export default function DashProfile() {
           placeholder='password'
           onChange={handleChange}
         />
-        <Button
+         <Button
           type='submit'
           gradientDuoTone='purpleToBlue'
           outline
