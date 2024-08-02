@@ -9,7 +9,7 @@ import cookieParser from 'cookie-parser';
 
 
 dotenv.config()
-let uri = process.env.MONGO
+let uri = process.env.MONGO2
 console.log(uri);
  
 mongoose.connect(uri)
